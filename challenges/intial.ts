@@ -12,5 +12,5 @@ function convertToInitials(name: string): string {
     const initials = `${words[0][0].toUpperCase()}.${words[1][0].toUpperCase()}`;
     return initials;
 }
-console.log(convertToInitials("Sam Harris")); // Output: S.H
-console.log(convertToInitials("patrick feeney")); // Output: P.F
+console.log(convertToInitials("Sam Harris")); 
+console.log(convertToInitials("patrick feeney"));
