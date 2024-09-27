@@ -3,7 +3,8 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-function swap(x: number, y: number): void {
+function swap(x: number, y: number): void
+{
     x = x + y;
     y = x - y; 
     x = x - y; 
@@ -20,26 +21,6 @@ rl.question("Enter the first number (x): ", (inputX: string) => {
         } else {
             console.log("Please enter valid numbers.");
         }
-
         rl.close(); 
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
