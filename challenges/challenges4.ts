@@ -1,26 +1,16 @@
-import * as readline from 'readline';
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
+import { log } from 'console';
+import *as readline from 'readline';
+const a = readline.createInterface({
+    input:process.stdin,
+    output:process.stdout
 });
-function swap(x: number, y: number): void
+a.question("Enter a and b",(val:string)=>
 {
-    x = x + y;
-    y = x - y; 
-    x = x - y; 
-    console.log("Swapped values: x =", x, ", y =", y);
-}
-rl.question("Enter the first number (x): ", (inputX: string) => {
-    const x = parseInt(inputX, 10);
+    var x:number=Number(val.split(" ")[0]);
+    var y:number=Number(val.split(" ")[1]);
+    x=x+y;
+    x=x-y;
+    x=x-y;
+    console.log("The values are",x,y);
 
-    rl.question("Enter the second number (y): ", (inputY: string) => {
-        const y = parseInt(inputY, 10);
-
-        if (!isNaN(x) && !isNaN(y)) {
-            swap(x, y); 
-        } else {
-            console.log("Please enter valid numbers.");
-        }
-        rl.close(); 
-    });
 });
