@@ -7,11 +7,11 @@
 // *****
 function printRightAngledTriangle(rows) {
     for (var i = 1; i <= rows; i++) {
-        var stars = '';
+        var number = '';
         for (var j = 1; j <= i; j++) {
-            stars += '*';
+            number += " ".concat(i);
         }
-        console.log(stars);
+        console.log(number.trim());
     }
 }
 var numberOfRows = 5;

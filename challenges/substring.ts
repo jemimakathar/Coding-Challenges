@@ -15,3 +15,9 @@ function sub_String(str:string):string[]
     return subset;
 }
 console.log(sub_String("jemi"));
+
+
+
+
+
+
