@@ -42,3 +42,13 @@ console.log("--------------------------------");
 //    3 3 3
 //   4 4 4 4
 //  5 5 5 5 5
+function printPyramidPattern(rows) {
+    for (var i = 1; i <= rows; i++) {
+        var line = ' '.repeat(rows - i);
+        for (var j = 1; j <= i; j++) {
+            line += "".concat(i, " ");
+        }
+        console.log(line.trim());
+    }
+}
+printPyramidPattern(5);
