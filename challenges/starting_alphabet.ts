@@ -22,7 +22,7 @@ function grouping_Alphabet(strings: string[]): { [key: string]: string[] } {
 
     // Sort each group's array
     for (const key in grouped) {
-        grouped[key].sort();
+        grouped[key].sort();//jemi,jemima
     }
 
     // Create a new object with sorted keys
