@@ -1,10 +1,8 @@
 // Hint
 // Given a string s, return the longest 
 // palindromic substring in s.
-
-import { log } from "console";
-
  
+
 // Example 1:
 // Input: s = "babad"
 // Output: "bab"
@@ -14,20 +12,35 @@ import { log } from "console";
 // Output: "bb"
 
 
-function longest_substring(a:string):string
+function longest_substring(string:string):any
 {
-    var rev="";
-    for(var i=a.length-1;i>=0;i--)
+    var longestString="";
+    for(var j=0;j<string.length;j++)
     {
-        rev=rev + a.charAt(i);
+       for(var k=j+1;k<=string.length;k++) 
+       {
+          var substring=string.substring(j,k);
+          var reverse="";
+            for(var i=substring.length-1;i>=0;i--)
+            {
+               reverse=reverse + substring.charAt(i);
+            }
+               if(reverse===substring)
+                {
+                    if(longestString.length<reverse.length)
+                    {
+                        longestString=reverse;
+                    }
+                }
+        }
     }
-    if(rev===a)
-    {
-    return a;
-    }
-    else{
-        return "no";
-    }
-  
+     return longestString.length > 0 ? longestString :"no";
 }
-console.log(longest_substring("mom"));
+console.log(longest_substring("babdradaracecar"));
+
+
+
+
+// function isPalindrome(str) {
+//     return str === str.split('').reverse().join('');
+// }
