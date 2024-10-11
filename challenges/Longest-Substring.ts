@@ -34,7 +34,7 @@ function longest_substring(string:string):any
                 }
         }
     }
-     return longestString.length > 0 ? longestString :"there is no palindrome";
+     return longestString.length > 0 ? longestString :"no palindrome";
 }
 console.log(longest_substring("babdradaracecar"));
 
