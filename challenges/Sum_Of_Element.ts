@@ -23,6 +23,5 @@ function Sum_Of_Number(array:number[],target:number):number
         }
     }
     return sum;
-
 }
 console.log(Sum_Of_Number([2,3,4,1,6,7],4));
