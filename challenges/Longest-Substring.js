@@ -15,16 +15,17 @@ function longest_substring(string) {
             var substring = string.substring(j, k);
             var reverse = "";
             for (var i = substring.length - 1; i >= 0; i--) {
-                reverse = reverse + substring.charAt(i);
+                reverse = reverse + substring.charAt(i); //bab
             }
-            if (reverse === substring) {
+            if (reverse === substring) //radar
+             {
                 if (longestString.length < reverse.length) {
-                    longestString = reverse;
+                    longestString = reverse; //radar
                 }
             }
         }
     }
-    return longestString.length > 0 ? longestString : "no";
+    return longestString.length > 0 ? longestString : "no palindrome";
 }
 console.log(longest_substring("babdradaracecar"));
 // function isPalindrome(str) {

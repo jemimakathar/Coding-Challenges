@@ -20,16 +20,17 @@ function longest_substring(string:string):any
        for(var k=j+1;k<=string.length;k++) 
        {
           var substring=string.substring(j,k);
+          
           var reverse="";
             for(var i=substring.length-1;i>=0;i--)
             {
-               reverse=reverse + substring.charAt(i);
+               reverse=reverse + substring.charAt(i);//bab
             }
-               if(reverse===substring)
+               if(reverse===substring)//radar
                 {
                     if(longestString.length<reverse.length)
                     {
-                        longestString=reverse;
+                        longestString=reverse;//radar
                     }
                 }
         }
