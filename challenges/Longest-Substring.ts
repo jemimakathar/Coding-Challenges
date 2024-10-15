@@ -1,6 +1,9 @@
 // Hint
 // Given a string s, return the longest 
 // palindromic substring in s.
+
+import { log } from "console";
+
  
 
 // Example 1:
@@ -20,6 +23,7 @@ function longest_substring(string:string):any
        for(var k=j+1;k<=string.length;k++) 
        {
           var substring=string.substring(j,k);
+          console.log(substring);
           
           var reverse="";
             for(var i=substring.length-1;i>=0;i--)

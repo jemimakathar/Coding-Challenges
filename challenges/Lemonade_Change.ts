@@ -32,8 +32,8 @@
 
 function Lemonade_Change(array:number[]):boolean
 {
-    let five_Rupees=0;
-    let ten_Rupees=0;
+    let five_Rupees=1;
+    let ten_Rupees=1;
     for(var i=0;i<array.length;i++)
     {
         let arr=array[i];
@@ -76,4 +76,4 @@ function Lemonade_Change(array:number[]):boolean
 }
 console.log(Lemonade_Change([5, 5, 5, 10, 20])); 
 console.log(Lemonade_Change([5,5,10,10,20])); 
-console.log(Lemonade_Change([10,5,10,10,20]));
+console.log(Lemonade_Change([20,5,5,5,5,5]));

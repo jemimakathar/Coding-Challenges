@@ -1,6 +1,8 @@
+"use strict";
 // Hint
 // Given a string s, return the longest 
 // palindromic substring in s.
+Object.defineProperty(exports, "__esModule", { value: true });
 // Example 1:
 // Input: s = "babad"
 // Output: "bab"
@@ -13,6 +15,7 @@ function longest_substring(string) {
     for (var j = 0; j < string.length; j++) {
         for (var k = j + 1; k <= string.length; k++) {
             var substring = string.substring(j, k);
+            console.log(substring);
             var reverse = "";
             for (var i = substring.length - 1; i >= 0; i--) {
                 reverse = reverse + substring.charAt(i); //bab

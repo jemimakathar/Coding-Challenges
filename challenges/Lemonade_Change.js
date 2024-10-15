@@ -21,8 +21,8 @@
 // For the last customer, we cannot give the change of $15 back because we only have two $10 bills.
 // Since not every customer received the correct change, the answer is false.
 function Lemonade_Change(array) {
-    var five_Rupees = 0;
-    var ten_Rupees = 0;
+    var five_Rupees = 1;
+    var ten_Rupees = 1;
     for (var i = 0; i < array.length; i++) {
         var arr = array[i];
         if (arr == 5) {
@@ -54,38 +54,4 @@ function Lemonade_Change(array) {
 }
 console.log(Lemonade_Change([5, 5, 5, 10, 20]));
 console.log(Lemonade_Change([5, 5, 10, 10, 20]));
-console.log(Lemonade_Change([10, 5, 10, 10, 20]));
-// function Lemonade_Change(array: number[]): boolean {
-//     let fiveDollar = 0;
-//     let tenDollar = 0;
-//     for (let i = 0; i < array.length; i++) {
-//         let payment = array[i];
-//         if (payment === 5) {
-//             fiveDollar++;  // Customer paid $5, no change required, just increase $5 bills
-//         } else if (payment === 10) {
-//             if (fiveDollar > 0) {
-//                 fiveDollar--;  // Give one $5 bill as change
-//                 tenDollar++;   // Keep the $10 bill
-//             } else {
-//                 return false;  // If no $5 bills available, can't make change
-//             }
-//         } else if (payment === 20) {
-//             // Prioritize giving one $10 and one $5 as change, if possible
-//             if (tenDollar > 0 && fiveDollar > 0) {
-//                 tenDollar--;
-//                 fiveDollar--;
-//             } 
-//             // Otherwise, try giving three $5 bills as change
-//             else if (fiveDollar >= 3) {
-//                 fiveDollar -= 3;
-//             } 
-//             // If neither is possible, return false
-//             else {
-//                 return false;
-//             }
-//         }
-//     }
-//     return true;  // If we processed all customers successfully, return true
-// }
-// console.log(Lemonade_Change([5, 5, 5, 10, 20]));  // Output: true
-// console.log(Lemonade_Change([5, 5, 10, 10, 20]));  // Output: false
+console.log(Lemonade_Change([20, 5, 5, 5, 5, 5]));
