@@ -21,7 +21,7 @@
 // Explanation: We cannot do any operations on the string so the length remains the same.
 
 
-function Remove_AB_CD(s: string): any {
+function Remove_AB_CD(s: string): number{
     
     while (true) {
         var st = s.toUpperCase();
