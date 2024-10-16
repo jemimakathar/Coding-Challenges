@@ -23,16 +23,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // Output: 0
 // Explanation: All the black balls are already grouped to the right.
 function Blackball_Whiteball(string) {
-    var count = 0;
+    var Ones_count = 0;
     var swap = 0;
     for (var i = 0; i < string.length; i++) {
         if (string[i] == "1") {
-            count++;
+            Ones_count++;
         }
         else {
-            swap = swap + count;
+            swap = swap + Ones_count;
         }
     }
     return swap;
 }
-console.log(Blackball_Whiteball("0100")); //001
+console.log(Blackball_Whiteball("010")); //001
