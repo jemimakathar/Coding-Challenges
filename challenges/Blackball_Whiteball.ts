@@ -46,4 +46,4 @@ function Blackball_Whiteball(string:string):number
     return swap;
 
 }
-console.log(Blackball_Whiteball("010"));//001
+console.log(Blackball_Whiteball("101"));//001
