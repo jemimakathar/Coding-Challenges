@@ -15,17 +15,15 @@ function Longest_Common_Prefix(strs) {
         return "";
     // Find the minimum length of strings in the array
     var minLen = Math.min.apply(Math, strs.map(function (str) { return str.length; }));
-    console.log(minLen);
     var prefix = "";
-    for (var i = 1; i < minLen; i++) {
+    for (var i = 0; i < minLen; i++) {
         var char = strs[0][i];
-        console.log(char);
-        // for (let j = 1; j < strs.length; j++) {
-        //     if (strs[j][i] !== char) {
-        //         return prefix;
-        //     }
-        // }
-        // prefix += char;
+        for (var j = 1; j < strs.length; j++) {
+            if (strs[j][i] !== char) {
+                return prefix;
+            }
+        }
+        prefix += char;
     }
     return prefix;
 }

@@ -20,28 +20,20 @@ function Longest_Common_Prefix(strs: string[]): string {
     
     // Find the minimum length of strings in the array
     let minLen = Math.min(...strs.map(str => str.length));
-    console.log(minLen);
-    
-
     let prefix = "";
-
     for (let i = 0; i < minLen; i++) {
         const char = strs[0][i];
-         console.log(char);
         
-
-        // for (let j = 1; j < strs.length; j++) {
-        //     if (strs[j][i] !== char) {
-        //         return prefix;
-        //     }
-        // }
-        
-        // prefix += char;
-    }
-    
+        for (let j = 1; j < strs.length; j++) {
+           if (strs[j][i] !== char) {
+                 return prefix;
+             }
+         }
+         prefix += char;
+    } 
     return prefix;
 }
 
-console.log(Longest_Common_Prefix(["flight", "flower", "floew"])); // Output: "fl"
-console.log(Longest_Common_Prefix(["nithya", "nith", "nit"]));    // Output: "ni"
+console.log(Longest_Common_Prefix(["flight", "flower", "floew"])); 
+console.log(Longest_Common_Prefix(["nithya", "nith", "nit"]));    
 
