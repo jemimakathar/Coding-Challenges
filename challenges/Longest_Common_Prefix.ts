@@ -21,15 +21,15 @@ function Longest_Common_Prefix(strs: string[]): string {
     // Find the minimum length of strings in the array
     let minLen = Math.min(...strs.map(str => str.length));
     let prefix = "";
-    for (let i = 0; i < minLen; i++) {
-        const char = strs[0][i];
+    for (let i = 0; i < minLen; i++) {//outer loop contains 1st element in array
+        const char = strs[0][i];//n
         
-        for (let j = 1; j < strs.length; j++) {
-           if (strs[j][i] !== char) {
+        for (let j = 1; j < strs.length; j++) {//j=1 -- nith
+           if (strs[j][i] !== char) {//--> j=nith ,i=n (0th index) !== n
                  return prefix;
              }
          }
-         prefix += char;
+         prefix += char;//prefix=n
     } 
     return prefix;
 }
