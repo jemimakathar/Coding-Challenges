@@ -19,17 +19,19 @@ function Longest_Common_Prefix(strs: string[]): string {
     if (strs.length === 0) return "";
     
     // Find the minimum length of strings in the array
+
+    
     let minLen = Math.min(...strs.map(str => str.length));
     let prefix = "";
-    for (let i = 0; i < minLen; i++) {//outer loop contains 1st element in array
+    for (let i = 0; i < minLen; i++) {      //outer loop contains 1st element in array
         const char = strs[0][i];//n
         
         for (let j = 1; j < strs.length; j++) {//j=1 -- nith
-           if (strs[j][i] !== char) {//--> j=nith ,i=n (0th index) !== n
+           if (strs[j][i] !== char) {      //--> j=nith ,i=n (0th index) !== n
                  return prefix;
              }
          }
-         prefix += char;//prefix=n
+         prefix += char;     //prefix=n
     } 
     return prefix;
 }
