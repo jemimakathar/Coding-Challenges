@@ -12,6 +12,8 @@ const toTarget = Number(getTarget);//The map() function is designed to operate o
 
 function Twosum(toNumberArrays:number[],target:number):number[]|string
 {
+    var i= toNumberArrays[0];
+    var j= toNumberArrays[toNumberArrays.length-1];
     for(var i=0;i<toNumberArrays.length;i++)
     {
         for(var j=i+1;j<toNumberArrays.length;j++)

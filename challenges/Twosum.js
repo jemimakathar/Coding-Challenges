@@ -8,8 +8,10 @@ var getTarget = getPrompts("Enter the target:");
 var toNumberArrays = getArrayno.split(' ').map(Number);
 var toTarget = Number(getTarget); //The map() function is designed to operate on arrays, not on strings or individual values.
 function Twosum(toNumberArrays, target) {
+    var i = toNumberArrays[0];
+    var j = toNumberArrays[toNumberArrays.length - 1];
     for (var i = 0; i < toNumberArrays.length; i++) {
-        for (var j = i + 1; j < toNumberArrays.length; j++) {
+        for (var j = i; j < toNumberArrays.length; j++) {
             if (toNumberArrays[i] + toNumberArrays[j] == target) {
                 return [i, j];
             }
