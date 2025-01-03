@@ -1,0 +1,44 @@
+<!-- Create a Loading Spinner
+Create a spinning loader that:
+Uses only CSS (no JavaScript).
+Has a rotating circular shape.
+Should use @keyframes for animation.
+Key Concepts: @keyframes, animations, border-radius. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            background-color: grey;
+        }
+        .loader
+        {
+            border-radius: 50%;
+            border: 5px solid;
+            border-top: 5px solid #3498db; 
+            animation: spin 1s linear infinite; /* Apply rotation animation */ 
+            height: 50px;
+            width:50px;
+        }
+        @keyframes spin {
+            0%{
+                transform: rotate(0deg); /* Start at 0 degree */
+            }
+            100%{
+                transform: rotate(360deg); /* Complete a full rotation */
+            }    
+        }
+    </style>
+</head>
+<body>
+ <div class="loader"></div> 
+</body>
+</html>
+

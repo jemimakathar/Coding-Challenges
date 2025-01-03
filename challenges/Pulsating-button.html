@@ -1,0 +1,54 @@
+<!-- 
+Here's a fun and creative CSS coding challenge for you to try!
+Challenge: Create a Pulsating Button with Hover Animation
+Objective: Design a button using pure CSS that:
+Pulsates (scales up and down) continuously.
+Changes color and grows slightly larger when hovered over. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulsating Button</title>
+    <style>
+        body{
+            display:flex;
+            justify-content: center;
+            align-items:center;
+           height:100vh;   /*(View port height); */
+            margin: 0;
+            background-color: #f4f4f4;
+            font-family:Arial,sans-serif;
+        }
+        .button{
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            animation:pulse 1.5s infinite ease-in-out; /*name of the keyframe, duration 1.5s,The animation will repeat forever.,This is the animation timing function.*/
+        }
+        .button:hover{
+            background: #0056b3;
+            transform: scale(1.2);/*scale(1) means the element retains its original size scale(1.2) increases the element's size by 20% (i.e., 1.2 times its original size).*/
+            animation: none; /* Stop pulsating on hover */
+        }
+        @keyframes pulse {
+        0%, 100% {
+        transform: scale(1); /* Normal size beginning and end */
+        }
+        50% {
+        transform: scale(1.1); /* Slightly larger middle */
+        }
+}
+
+    </style>
+</head>
+<body>
+    <divv class="button"></div>
+</body>
+</html>
