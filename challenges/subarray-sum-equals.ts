@@ -16,4 +16,21 @@
 // 5
 
 
-
+function subarraySum (nums:number[],k:number)
+{   
+    let count = 0; 
+    for(let i=0;i<nums.length;i++)
+    {
+        let sum=0;
+        for(let j=i;j<nums.length;j++)
+        {
+            sum =sum+nums[j];
+            if(sum===k)
+            {
+                count++;
+            }
+        }
+    }
+    return count;
+}
+console.log(subarraySum([1,2,3,6,4,2,0,4],6));

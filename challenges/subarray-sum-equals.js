@@ -14,9 +14,17 @@
 // k = 6
 // Output:
 // 5
-function subArray(input, k) {
-    var str = input.toString();
-    var data = str.substring;
-    console.log(data);
+function subarraySum(nums, k) {
+    var count = 0;
+    for (var i = 0; i < nums.length; i++) {
+        var sum = 0;
+        for (var j = i; j < nums.length; j++) {
+            sum = sum + nums[j];
+            if (sum === k) {
+                count++;
+            }
+        }
+    }
+    return count;
 }
-console.log(subArray([1, 2, 3, 6, 4, 2, 0, 4], 6));
+console.log(subarraySum([1, 2, 3, 6, 4, 2, 0, 4], 6));
